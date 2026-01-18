@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* .button i::before{
+    position: absolute;
+    border: 2px solid var(--clr);
+    background-color: black;
+    color: white;
+    transition:0.2s;
+    content:"";
+    width: 90px;
+    height: 40px;
+    left: 80px;
+    top: -2px;
+
+} */
