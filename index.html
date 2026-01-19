@@ -5,42 +5,45 @@
     <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <link href="/src/style.css" rel="stylesheet">
-    <title>text-formatter</title>
+    <title>Text Formatter</title>
   </head>
-  <body class="bg-gray-200">
-    <div class="flex justify-center items-cente mt-20 ">
-     
+  <body data-new-gr-c-s-check-loaded="14.1268.0" data-gr-ext-installed="" class="bg-gray-200">
+    <div class="flex justify-center items-cente mt-10 w-full">
       <!-- text area -->
       <div class="bg-white w-full max-w-lg rounded shadow-lg p-6">
        <h1 class="text-2xl font-bold text-center text-gray-800 p-8">Text Formatter</h1>
-        <input type="text" id="textInput" placeholder="Type your text here...." class="border rounded w-full h-50 p-2 cursor-pointer bg-gray-100">
+        <input type="text" id="textArea" placeholder="Type your text here...." class="border-gray-50 rounded w-full h-50 p-2 cursor-pointer bg-gray-100">
         <div>
-          <p class="text-gray-500 dark:text-[#9eb4b7] text-xs p-2 font-medium  leading-normal bg-gray-200 border">0 characters | 0 words</p>
+          <p class="text-gray-500 dark:text-[#9eb4b7] text-xs p-2 font-medium  leading-normal bg-gray-200 border-gray-50">0 characters | 0 words</p>
         </div>
       <!-- button -->
-      <div class="grid grid-cols-1 mt-4 font-bold space-y-2 max-w-lg">
-        <button class="border p-2 cursor-pointer rounded bg-sky-300">Uppercase</button>
-        <button class="border p-2 cursor-pointer rounded bg-sky-300">Lowercase</button>
-        <button class="border p-2 cursor-pointer rounded bg-sky-300">Clear</button>
+      <div class="grid grid-cols-1 w-full mt-4 font-bold space-y-2 max-w-lg">
+        <button id="uppercaseBtn" class="border-gray-200 shadow-xl/30 p-2 rounded bg-gray-100 text-black hover:bg-gray-300 hover:text-white cursor-pointer hover:shadow-red-900">Uppercase</button>
+        <button  id="lowercaseBtn" class="border-gray-200 p-2 rounded shadow-xl/30 bg-gray-100 text-black hover:bg-gray-300 hover:text-white hover:shadow-red-900 cursor-pointer">Lowercase</button>
+        <button id="clearBtn" class=" border-gray-200 p-2 rounded shadow-xl/30 bg-gray-100 text-black hover:bg-gray-300 hover:text-white hover:shadow-red-900 cursor-pointer">Clear</button>
       </div>
       <!-- color -->
-        <div class="colorChanger w-300 pt-4 space-x-4 justify-center items-center m-2" id="colorChanged">
-          <button class="color-button border-2 shadow-xl/30 rounded p-2 bg-red-700 text-white font-bold" data-color="red">Red</button>
-          <button class="color-button border-2 shadow-xl/30 rounded p-2 bg-blue-700 text-white font-bold" data-color="Blue">Blue</button>
-          <button class="color-button border-2 shadow-xl/30 rounded p-2 bg-green-700 text-white font-bold" data-color="green">Green</button>
-          <button class="color-button border-2 shadow-xl/30 rounded p-2 bg-yellow-400 text-white font-bold" data-color="yellow">Yellow</button>
-          <button class="color-button borde2 shadow-xl/30 rounded p-2 bg-lime-500 text-white font-bold" data-color="lime">Olive</button>
-          <button class="color-button border-2 shadow-xl/30 rounded p-2 bg-gray-500 text-white font-bold" data-color="gray">Gray</button>
-      </div>
+        <!-- <div class="colorChanger w-full pt-4 space-x-4 justify-center items-center m-2 " id="colorChanged">
+          <button class="color-button border-2 shadow-xl/30 rounded p-2 bg-red-700 text-white font-bold cursor-pointer hover:bg-red-300 hover:text-black" data-color="red">Red</button>
+          <button class="color-button border-2 shadow-xl/30 rounded p-2 bg-blue-700 text-white font-bold cursor-pointer hover:bg-blue-300 hover:text-black" data-color="Blue">Blue</button>
+          <button class="color-button border-2 shadow-xl/30 rounded p-2 bg-green-700 text-white font-bold cursor-pointer hover:bg-green-300 hover:text-black" data-color="green">Green</button>
+          <button class="color-button border-2 shadow-xl/30 rounded p-2 bg-yellow-400 text-white font-bold cursor-pointer hover:bg-yellow-300 hover:text-black" data-color="yellow">Yellow</button>
+          <button class="color-button borde2 shadow-xl/30 rounded p-2 bg-lime-500 text-white font-bold cursor-pointer hover:bg-lime-300 hover:text-black" data-color="lime">Olive</button>
+          <button class="color-button border-2 shadow-xl/30 rounded p-2 bg-gray-500 text-white font-bold cursor-pointer hover:bg-gray-300 hover:text-black" data-color="gray">Gray</button>
+      </div> -->
       <!-- button -->
-       <div class="flex ">
-        <button class="border shadow-xl/30 rounded p-2 w-full bg-black text-white font-bold">B</button>
-        <button class="border shadow-xl/30 rounded p-2 w-full bg-black text-white font-bold">I</button>
-        <button class="border shadow-xl/30 rounded p-2 w-full bg-black text-white font-bold">U</button>
-       </div>
+       <!-- <div class="flex mt-8 space-x-2 w-full">
+        <button id="boldBtn" class="border-gray-200 shadow-xl/30 rounded p-2 w-full bg-gray-100 text-black font-bold cursor-pointer hover:bg-gray-300 hover:text-black">B</button>
+        <button id="italicBtn" class="border-gray-200 shadow-xl/30 rounded p-2 w-full bg-gray-100 text-black font-bold cursor-pointer hover:bg-gray-300 hover:text-black">I</button>
+        <button id="underLineBtn" class="border-gray-200 shadow-xl/30 rounded p-2 w-full bg-gray-100 text-black font-bold cursor-pointer hover:bg-gray-300 hover:text-black">U</button>
+       </div> -->
+
+       <!-- <div>
+        <div id="response"></div>
+       </div> -->
+       <h2 id="display" class="display mt-4 text-2xl font-bold text-black"></h2>
     </div>
     
-
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
