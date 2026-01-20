@@ -8,8 +8,17 @@ const boldBtn = document.getElementById("boldBtn");
 const italicBtn = document.getElementById("ithalicBtn");
 const underLineBtn = document.getElementById("underLineBtn");
 const display = document.getElementById("display");
+const charCount = document.getElementById("char-count");
+const maxChars = 200;
+// const wordsCount = document.getElementById("words-count");
+// const words = '';
 
 console.log(clearBtn);
+
+textArea.addEventListener('input', function(){
+   const remaining = maxChars - textArea.value.length;
+   charCount.textContent = `${remaining}/200 characters remaining`;
+})
 
 uppercaseBtn.addEventListener('click', () => {
    const storeValue = textArea.value;
@@ -21,38 +30,27 @@ lowercaseBtn.addEventListener('click', () => {
    textArea.value = storeValue.toLowerCase();
 
 });
-clearBtn.addEventListener('click',() => {
+clearBtn.addEventListener('click',function() {
     // console.log("textArea");
     // const storeValue = textArea.value;
     // console.log(storeValue);
     textArea.value = "";
+    charCount.textContent = '200/200 characters remaining';
 
 });
 // colorButtons.forEach(button =>{
 //     button.addEventListener('click',function (){
 //        const color = this.getAttribute('data-color'); 
-//        textArea.style.color = color;
+//        textarea.style.color = color;
 
 //     })
 // })
-// boldBtn.addEventListener('click', () => {
-//     textArea.style.fontWeight = boldBtn();
+
+// boldBtn.addEventListener('click', function() {
+//    const storeValue = textArea.value;
+//    textArea.value = storeValue.Bold();
    
 // })
 
 
-// uppercaseBtn.addEventListener('click', () => {
-//     textInput.value = textInput.value.toUpperCase(); 
-// });
 
-// lowercaseBtn.addEventListener('click', () => {
-//     textInput.value = textInput.value.toLowerCase(); 
-// });
-
-// clearBtn.addEventListener('click', () => {
-//     textInput.value = textInput.value.toClear(); 
-// });
-
-// colourBtn.forEach('click', () => {
-//     textInput.value = textInput.value.toColour(); 
-// });
